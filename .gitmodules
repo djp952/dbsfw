@@ -4,3 +4,9 @@
 [submodule "sqlite"]
 	path = depends/sqlite
 	url = https://github.com/djp952/external-sqlite.git
+[submodule "rapidjson"]
+	path = depends/rapidjson
+	url = https://github.com/Tencent/rapidjson.git
+[submodule "libwebp"]
+	path = depends/libwebp
+	url = https://github.com/webmproject/libwebp.git
