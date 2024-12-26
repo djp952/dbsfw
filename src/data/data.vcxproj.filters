@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="External Libraries">
+      <UniqueIdentifier>{e07986af-3056-4950-bc4d-9efaaa32ea22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External Libraries\sqlite3">
+      <UniqueIdentifier>{2002b2df-03f8-475a-9728-326f9d74cb42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External Libraries\sqlite3\Header Files">
+      <UniqueIdentifier>{8afeb328-6117-444b-883a-12854f3a6e67}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="External Libraries\sqlite3\Source Files">
+      <UniqueIdentifier>{4d30e57c-58cd-4b84-a231-9f12e9a71c97}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Database.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\depends\sqlite\sqlite3.h">
+      <Filter>External Libraries\sqlite3\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\depends\sqlite\sqlite3ext.h">
+      <Filter>External Libraries\sqlite3\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteSafeHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SQLiteException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CardType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Card.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrapCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpellCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Series.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Print.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintRarity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Extensions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artwork.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RestrictionList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Restriction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Uuid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CardId.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintId.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArtworkId.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SeriesId.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RestrictionListId.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ruling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AssemblyInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\tmp\version\version.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Database.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\depends\sqlite\sqlite3.c">
+      <Filter>External Libraries\sqlite3\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbextension.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLiteException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TrapCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpellCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Series.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Print.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Extensions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Artwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RestrictionList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Uuid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Export.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Import.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ruling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\tmp\version\version.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data.def">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
