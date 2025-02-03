@@ -227,7 +227,7 @@ namespace zuki.dbsfw
 			// >> Specified Cost
 			const string SPECIFIEDCOST_REGEX = "<div class=\"cardDataCell\">.*?<.*?>(Specified cost|指定コスト).*?<span class=\".*?\">(?<specifiedcost>.*?)</span>";
 			Match specifiedcost = Regex.Match(html, SPECIFIEDCOST_REGEX, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-			if(!specifiedcost.Groups["specifiedcost"].Success) throw new Exception("Unable to capture specified cost; check regex");
+			if(!specifiedcost.Groups["specifiedcost"].Success) specifiedcost = null; // <-- no match if specified cost is "-"
 
 			// >> Power
 			const string POWER_REGEX = "<div class=\"cardDataCell\">.*?<.*?>(Power|パワー)</.*?>.*?<div class=\"data\">(?<power>.*?)</div>";
@@ -249,16 +249,17 @@ namespace zuki.dbsfw
 			Match effect = Regex.Match(html, EFFECT_REGEX, RegexOptions.IgnoreCase | RegexOptions.Singleline);
 			if(!effect.Groups["effect"].Success) throw new Exception("Unable to capture effect; check regex");
 
-			// All non-leader cards have a cost
-			if(!int.TryParse(cost.Groups["cost"].Value.Trim(), out int costval))
-				throw new Exception("Unable to convert cost into an integer");
+			// All non-leader cards have a cost, when scraping "-" means zero
+			string coststr = cost.Groups["cost"].Value.Trim();
+			int costval = 0;
+			if((coststr != "-") && !int.TryParse(coststr, out costval)) throw new Exception("Unable to convert cost into an integer");
 
 			return new ScrapedCardDetail
 			{
 				Type = type.Groups["type"].Value.Trim(),
 				Color = color.Groups["color"].Value.Trim(),
 				Cost = costval,
-				SpecifiedCost = specifiedcost.Groups["specifiedcost"].Value.Trim(),
+				SpecifiedCost = specifiedcost?.Groups["specifiedcost"].Value.Trim(),
 				Name = name.Groups["name"].Value.Trim(),
 				Power = ParseNullableInteger(power.Groups["power"].Value.Trim()),
 				ComboPower = ParseNullableInteger(combopower.Groups["combopower"].Value.Trim()),
