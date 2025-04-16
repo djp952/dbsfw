@@ -242,11 +242,16 @@ namespace zuki.dbsfw
 		/// <param name="outdir">Output directory</param>
 		private static void ScrapeCard(string target, string outdir)
 		{
-			// TODO: not all cards have EN and JP, like FP-030; let it fail for now
-			// I'm not going to scrape all the cards at first, just a handful
+			Scraper.ScrapedCard en;
 
-			var en = Scraper.ScrapeCard(target, "EN");
+			// Some EN cards require using a _p1 alternate
+			try { en = Scraper.ScrapeCard(target, "EN"); }
+			catch { en = Scraper.ScrapeCard(target, "EN", true); }
+
 			var jp = Scraper.ScrapeCard(target, "JP");
+
+			// The color isn't set properly for some cards in English
+			en.FrontDetail.Color = jp.FrontDetail.Color;
 
 			StringBuilder sb = new StringBuilder();
 			StringWriter sw = new StringWriter(sb);

@@ -1,19 +1,19 @@
 {
   "cardid": "FP-037",
   "type": "BATTLE",
-  "color": "Green",
-  "rarity": "R",
+  "color": "Red",
+  "rarity": "PR",
   "detail": [
     {
       "side": null,
       "language": "EN",
-      "name": "Son Goku",
-      "cost": 3,
-      "specifiedcost": "G",
+      "name": "Son Goku (Mini) : DA",
+      "cost": 2,
+      "specifiedcost": "R",
       "power": 20000,
-      "combopower": 10000,
-      "traits": "Saiyan/Planet Namek",
-      "effect": "[Permanent][Your Turn] If your life is at 2 or less, this card in a Battle Area gets +15000 power.\n[On Play] Add up to 1 card from your life to your hand."
+      "combopower": 5000,
+      "traits": "Saiyan/Demon Realm",
+      "effect": "[On Play] Add up to 1 card from your life to your hand.\n[When Attacking] If your Leader is awakened, choose up to 1 Battle Card in your Battle Area and it can't be KO'd by your opponent's skills until the end of your opponent's next turn."
     },
     {
       "side": null,

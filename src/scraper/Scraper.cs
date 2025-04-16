@@ -39,6 +39,11 @@ namespace zuki.dbsfw
 		static private readonly string CARD_DETAIL_URL_FORMAT = "https://www.dbs-cardgame.com/fw/{0}/cardlist/detail.php?card_no={1}";
 
 		/// <summary>
+		/// Alternate URL for retrieving card information from the Bandai web site
+		/// </summary>
+		static private readonly string CARD_DETAIL_URL_ALT_FORMAT = "https://www.dbs-cardgame.com/fw/{0}/cardlist/detail.php?card_no={1}&p=_p1";
+
+		/// <summary>
 		/// Base URL for retrieving a card image from the Bandai web site
 		/// </summary>
 		static private readonly string CARD_IMAGE_URL_FORMAT = "https://www.dbs-cardgame.com/fw/images/cards/card/{0}/{1}";
@@ -106,14 +111,16 @@ namespace zuki.dbsfw
 		/// </summary>
 		/// <param name="code">Card code</param>
 		/// <param name="language">Language code</param>
-		static public ScrapedCard ScrapeCard(string code, string language)
+		/// <param name="alternate">Alternate flag needed in some cases</param>
+		static public ScrapedCard ScrapeCard(string code, string language, bool alternate = false)
 		{
 			if(string.IsNullOrEmpty(code)) throw new ArgumentNullException(nameof(code));
 			if(string.IsNullOrEmpty(language)) throw new ArgumentNullException(nameof(language));
 			code = code.ToUpper();
 			language = language.ToLower();
 
-			string html = ScrapeHTML(string.Format(CARD_DETAIL_URL_FORMAT, language, code));
+			string html = ScrapeHTML(string.Format(alternate ? CARD_DETAIL_URL_ALT_FORMAT : CARD_DETAIL_URL_FORMAT,
+				language, code));
 
 			const string CARDNOCOL_REGEX = "<div class=\"cardNoCol\">.*?<div class=\"cardNo\">(?<cardno>.*?)</div>.*?<div class=\"rarity\">(?<rarity>.*?)</div>";
 			Match cardnocol = Regex.Match(html, CARDNOCOL_REGEX, RegexOptions.IgnoreCase | RegexOptions.Singleline);
@@ -160,7 +167,7 @@ namespace zuki.dbsfw
 				card.FrontImage = new ScrapedCardImage()
 				{
 					Format = "image/webp",
-					Image = ScrapeCardImage(language, cardno + ".webp")
+					Image = ScrapeCardImage(language, cardno + (alternate ? "_p1" : "") + ".webp")
 				};
 			}
 
