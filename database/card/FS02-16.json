@@ -27,7 +27,36 @@
       "effect": "[永続]自分の手札が7枚以下の場合、手札のこのカードのコスト-1。\n[起動 メイン]自分の手札1枚を捨てる：相手のコスト5以下のバトルカード1枚までを選び、デッキの下に置く。"
     }
   ],
-  "faq": null,
+  "faq": [
+    {
+      "faqid": "Q222",
+      "language": "EN",
+      "question": "If you have 7 cards in your hand and this card's [Permanent] skill applies, can you pay 2 cost for this card and use it?",
+      "answer": "No, you can't.",
+      "related": null
+    },
+    {
+      "faqid": "Q315",
+      "language": "EN",
+      "question": "Can you activate this card's [Activate Main] skill when you only have this card (1 copy) in your hand?",
+      "answer": "No, you can't.",
+      "related": null
+    },
+    {
+      "faqid": "Q222",
+      "language": "JP",
+      "question": "自分の手札が７枚以下でこのカードの【永続】が適用されている場合、このカードを２コスト支払って使用することはできますか？",
+      "answer": "いいえ、できません。",
+      "related": null
+    },
+    {
+      "faqid": "Q315",
+      "language": "JP",
+      "question": "自分の手札がこのカード1枚のみの時にこのカードの【起動 メイン】を発動できますか？",
+      "answer": "いいえ、できません。",
+      "related": null
+    }
+  ],
   "image": [
     {
       "side": null,

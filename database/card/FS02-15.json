@@ -29,31 +29,17 @@
   ],
   "faq": [
     {
-      "faqid": "Q222",
+      "faqid": "Q221",
       "language": "EN",
-      "question": "If you have 7 cards in your hand and this card's [Permanent] skill applies, can you pay 2 cost for this card and use it?",
-      "answer": "No, you can't.",
+      "question": "If this card's [Activate Battle] skill activates in a state where you have 8 cards in your hand, then your hand is reduced to 7 cards, can you use this card's skill to draw 1 card?",
+      "answer": "Yes, you can. This card's skill references the number of cards in your hand at the timing when this card is used.",
       "related": null
     },
     {
-      "faqid": "Q315",
-      "language": "EN",
-      "question": "Can you activate this card's [Activate Main] skill when you only have this card (1 copy) in your hand?",
-      "answer": "No, you can't.",
-      "related": null
-    },
-    {
-      "faqid": "Q222",
+      "faqid": "Q221",
       "language": "JP",
-      "question": "自分の手札が７枚以下でこのカードの【永続】が適用されている場合、このカードを２コスト支払って使用することはできますか？",
-      "answer": "いいえ、できません。",
-      "related": null
-    },
-    {
-      "faqid": "Q315",
-      "language": "JP",
-      "question": "自分の手札がこのカード1枚のみの時にこのカードの【起動 メイン】を発動できますか？",
-      "answer": "いいえ、できません。",
+      "question": "手札が8枚の状態でこのカードの【起動 戦闘中】を発動し、手札が7枚になった場合、このカードのスキルでカード1枚を引くことができますか？",
+      "answer": "はい、できます。このカードのスキルはこのカードを使用した時点の手札枚数を参照します。",
       "related": null
     }
   ],
